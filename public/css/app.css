@@ -26,6 +26,13 @@ body {
     gap: 40px;
 }
 
+button.navbar-navlink {
+    outline: none;
+    background: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
 .navbar-navlink {
     color: #313131;
     font-family: "Poppins";
