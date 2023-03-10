@@ -12,9 +12,17 @@ class LoginController extends Controller
         return view('login');
     }
 
-    function login()
+    function login(Request $request)
     {
-        return redirect('/');
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required|min:8',
+        ]);
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect('/');
+        } else {
+            return back()->withErrors(['message' => 'These credentials do not match our records.']);
+        }
     }
 
     function logout(Request $request)
