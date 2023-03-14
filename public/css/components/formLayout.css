@@ -68,6 +68,10 @@
     opacity: 0.7;
 }
 
+input[type="textarea"].form-input {
+    height: 200px;
+}
+
 .form-submit-btn {
     font-style: normal;
     font-weight: 500;
