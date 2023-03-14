@@ -1,0 +1,107 @@
+.section {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.section-heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    /* identical to box height, or 117% */
+
+    letter-spacing: 0.5px;
+
+    color: #313131;
+}
+
+.section-break {
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 22px;
+}
+
+.section-post-new {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 45vh;
+}
+
+.section-post-new-img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+.section-post-new-info-wrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/banner.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.section-post-new-info-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.section-post-new-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section-post-new-stamps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-post-new-tag,
+.section-post-new-time {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17.1325px;
+    line-height: 26px;
+    color: #4b4b4b;
+}
+
+.section-post-new-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25.6988px;
+    line-height: 39px;
+    color: #313131;
+}
+
+.section-post-new-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.988px;
+    line-height: 30px;
+    color: #6e6e6e;
+}
+
+.section-post-new-read-btn {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17.1325px;
+    line-height: 26px;
+    color: #313131;
+}
