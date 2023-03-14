@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SignUpController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,7 @@ use App\Http\Controllers\LoginController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [PostController::class, 'home']);
 
 Route::get('/signup', [SignUpController::class, 'showSignUpForm'])->name('signup');
 Route::post('/signup', [SignUpController::class, 'signup']);
@@ -27,3 +26,5 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
 
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::resource('/posts', PostController::class);
