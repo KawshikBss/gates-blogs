@@ -27,8 +27,16 @@
                             <span class="section-post-new-time">{{$posts[0]->created_at?? ''}}</span>
                         </span>
                         <h5 class="section-post-new-title">{{$posts[0]->title?? ''}}</h5>
-                        <p class="section-post-new-description">{{$posts[0]->body?? ''}}</p>
-                        <a class="section-post-new-read-btn">Read Full</a>
+                        <p class="section-post-new-description">
+                            @if($posts[0]->body)
+                            @if(strlen($posts[0]->body) > 40)
+                            {{substr($posts[0]->body, 0, 37)}}...
+                            @else
+                            {{$posts[0]->body}}
+                            @endif
+                            @endif
+                        </p>
+                        <a class="section-post-new-read-btn" href="/posts/{{$posts[0]->id}}">Read Full</a>
                     </div>
                 </div>
             </div>
@@ -41,12 +49,20 @@
                 <div class="section-post-new-info-inner">
                     <div class="section-post-new-info">
                         <span class="section-post-new-stamps">
-                            <span class="section-post-new-tag">{{$posts[0]->tag?? ''}}</span>
-                            <span class="section-post-new-time">{{$posts[0]->created_at?? ''}}</span>
+                            <span class="section-post-new-tag">{{$posts[1]->tag?? ''}}</span>
+                            <span class="section-post-new-time">{{$posts[1]->created_at?? ''}}</span>
                         </span>
-                        <h5 class="section-post-new-title">{{$posts[0]->title?? ''}}</h5>
-                        <p class="section-post-new-description">{{$posts[0]->body?? ''}}</p>
-                        <a class="section-post-new-read-btn">Read Full</a>
+                        <h5 class="section-post-new-title">{{$posts[1]->title?? ''}}</h5>
+                        <p class="section-post-new-description">
+                            @if($posts[1]->body)
+                            @if(strlen($posts[1]->body) > 40)
+                            {{substr($posts[1]->body, 0, 37)}}...
+                            @else
+                            {{$posts[1]->body}}
+                            @endif
+                            @endif
+                        </p>
+                        <a class="section-post-new-read-btn" href="/posts/{{$posts[1]->id}}">Read Full</a>
                     </div>
                 </div>
             </div>
@@ -57,11 +73,7 @@
     @endif
 </div>
 
-@foreach($posts as $post)
-
-<h1>{{$post->title}}</h1>
-
-@endforeach
+<x-carousel :items="$posts" />
 
 @endif
 
