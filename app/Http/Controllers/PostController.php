@@ -59,7 +59,9 @@ class PostController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $posts = Post::all();
+        return view('posts/singlePost', ['post' => $post, 'posts' => $posts]);
     }
 
     /**
