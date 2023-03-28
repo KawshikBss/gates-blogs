@@ -1,0 +1,46 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: start;
+    background-color: white;
+}
+
+.card-img {
+    width: 330px;
+    height: 255px;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    border-radius: 0.21rem;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #313131;
+}
+
+.card-desc {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #6e6e6e;
+}
+
+.card-link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    color: #313131;
+    text-decoration: none;
+    transition: 0.5s all ease-in-out;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
