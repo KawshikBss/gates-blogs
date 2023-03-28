@@ -57,7 +57,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .section-post-new-info {
@@ -104,4 +104,11 @@
     font-size: 17.1325px;
     line-height: 26px;
     color: #313131;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.5s all ease-in-out;
+}
+
+.section-post-new-read-btn:hover {
+    text-decoration: underline;
 }
