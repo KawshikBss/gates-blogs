@@ -27,9 +27,9 @@ class SignUpController extends Controller
         ]);
         if ($user) {
             Auth::login($user);
-            redirect('/');
+            return redirect('/');
         } else {
-            return back()->withInput()->withErrors(['message' => 'Failed to create user. Please try again.']);
+            return back()->withErrors(['message' => 'Failed to create user. Please try again.']);
         }
     }
 }
