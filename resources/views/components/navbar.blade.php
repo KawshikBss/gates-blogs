@@ -2,9 +2,9 @@
     <a href="/"><img src="{{ asset('images/logo.png') }}" class="navbar-logo" /></a>
     <div class="navbar-links">
         <a href="/" class="navbar-navlink navlink-active">Home</a>
-        <a href="#" class="navbar-navlink">Connect</a>
+<!--         <a href="#" class="navbar-navlink">Connect</a> -->
         @if(auth()->user())
-        <a href="/posts/create" class="navbar-navlink">Create</a>
+        <a href="/posts/create" class="navbar-navlink">Post</a>
         <span>{{auth()->user()->name}}</span>
         <form id="logout-form" action="{{ route('logout') }}" method="POST">
             @csrf
