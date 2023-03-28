@@ -42,6 +42,7 @@
             </div>
         </div>
     </div>
+    @if(count($posts)> 1)
     <div class="section-posts-new">
         <div class="section-post-new" style="flex-direction: row-reverse;">
             <img class="section-post-new-img" src="{{$posts[1]->image?? ''}}">
@@ -68,6 +69,7 @@
             </div>
         </div>
     </div>
+    @endif
     @else
     <p>None</p>
     @endif
