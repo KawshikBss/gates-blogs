@@ -1,0 +1,81 @@
+.carousel-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.carousel-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d6d6d6;
+    /* padding: 6px 0; */
+    margin-bottom: 36px;
+}
+
+.carousel-section-name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    color: #313131;
+    padding: 6px 0;
+    border-bottom: 2px solid #313131;
+}
+
+.carousel-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.carousel-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid #282828;
+    opacity: 0.3;
+    text-align: center;
+    transition: 0.3s all ease-in-out;
+    cursor: pointer;
+}
+
+.carousel-btn:hover {
+    opacity: 1;
+}
+
+/* width */
+.carousel-items::-webkit-scrollbar {
+    height: 5px;
+}
+
+/* Track */
+.carousel-items::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+.carousel-items::-webkit-scrollbar-thumb {
+    background: #313131;
+    border-radius: 0.21rem;
+}
+
+/* Handle on hover */
+.carousel-items::-webkit-scrollbar-thumb:hover {
+    border: 1px solid white;
+}
+
+.carousel-items {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 110px;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+}
